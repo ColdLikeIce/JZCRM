@@ -1,5 +1,8 @@
 <template>
   <div class="index">
+    <h3-banner :bgUrl="require('../assets/img/banner.png')">
+
+    </h3-banner>
     <div>
       <p class="introduce">{{ maintitle }}</p>
       <p class="subtitle">{{mainsubtitle}}</p>
@@ -78,8 +81,12 @@
 </template>
 
 <script>
+import h3Banner from  '../components/common/h3-banner'
 export default {
   name: 'Index',
+  components:{
+    h3Banner
+  },
   data() {
     return {
       showpart: false,

@@ -1,28 +1,25 @@
 <template>
-    <div class="wrapper">
-        <a-layout id="components-layout-demo-top-side-2">
-            <a-layout-header>
-                <h3-header>
-                    <!-- <img class="header-logo" slot="header-logo" src="../assets/img/logo.png" alt="logo"> -->
-                </h3-header>
-                <h3-index></h3-index>
-                <h3-bottom></h3-bottom>
-            </a-layout-header>
-        </a-layout>
+    <div >
+       <h3-header></h3-header>
+       <router-view/>
+       <h3-footer></h3-footer>
     </div>
 </template>
 
 <script>
 /* eslint-disable*/
-import vHead from '../components/h3-header.vue'
-import Index from '../views/index.vue'
-import Bottom from '../components/h3-bottom.vue'
+import h3Header from '@/components/common/h3-header.vue';
+import h3Footer from '@/components/common/h3-footer.vue';
+import h3Backtop from '@/components/common/h3-backtop.vue';
+import h3Consult from '@/components/common/h3-consult.vue';
+
 export default {
   name: 'Web',
   components: {
-    'h3-header': vHead,
-    'h3-index': Index,
-    'h3-bottom':Bottom
+   h3Header,
+   h3Footer,
+   h3Backtop,
+   h3Consult
   },
   data() {
     return {}
@@ -38,8 +35,6 @@ export default {
   background: #ffffff;
   margin: 0 auto;
 }
-.wrapper {
-  background: #f9fafc;
-}
+
 </style>
 
