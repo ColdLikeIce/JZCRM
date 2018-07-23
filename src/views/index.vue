@@ -74,9 +74,6 @@
         <a href="">查看更多</a>
       </div>
     </div>
-    <div class="part5">
-     
-    </div>
   </div>
 </template>
 
