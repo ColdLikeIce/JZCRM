@@ -2,7 +2,6 @@
 <template>
   <div>
     <h3custom></h3custom>
-    <slot></slot>
   </div>
 </template>
 
