@@ -5,6 +5,7 @@ import Web from '@/views/web'
 import Download from '@/views/dowmload'
 import Servicecontent from '@/views/servicecontent'
 import Introduction from '@/views/introduction'
+import CustomCase from '@/views/customcase'
 Vue.use(Router)
 
 export default new Router({
@@ -46,6 +47,14 @@ export default new Router({
           component: Introduction,
           meta: {
             title: '公司简介'
+          }
+        },
+        {
+          path: 'customcase',
+          name: 'CustomCase',
+          component: CustomCase,
+          meta: {
+            title: '客户案例'
           }
         }
       ]

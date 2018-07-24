@@ -1,9 +1,9 @@
 <template>
   <div class="index">
-    <div>
+    <div class="part1">
       <p class="introduce">{{ maintitle }}</p>
       <p class="subtitle">{{mainsubtitle}}</p>
-      <div class="part1">
+      <div class="phonepart">
         <div v-show='showpart' class="hrmpart">
           <div>
             <img src="../assets/img/02.png" alt="">
@@ -126,7 +126,8 @@ export default {
         }
       ],
       easyusedmsg: '决招产品操作便捷、容易上手',
-      freemsg: '立刻获取15天免费体验权益'
+      freemsg: '立刻获取15天免费体验权益',
+      orderEventList: [{}]
     }
   },
   mounted() {
@@ -167,22 +168,32 @@ export default {
   color: rgba(125, 132, 150, 1);
   margin-bottom: 0;
 }
-.smalltitle {
-  font-size: 38px;
-  color: rgba(0, 13, 76, 1);
-  line-height: 1;
-  margin-bottom: 25px;
-}
+
 .phone {
   margin-top: 212px;
 }
-.part1 {
+.phonepart {
   height: 930px;
   display: flex;
   justify-content: center;
 }
 .part2 {
   margin-top: 124px;
+  .smalltitle {
+    font-size: 38px;
+    color: rgba(0, 13, 76, 1);
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+  .part2_content {
+    margin-top: 80px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    .part_item {
+      width: 360px;
+    }
+  }
 }
 .part3 {
   margin-top: 130px;
@@ -207,6 +218,7 @@ export default {
       margin-top: 68px;
       display: flex;
       .button_item {
+        border-radius:25px;
         color: #ffffff;
         background: #388bff;
         width: 126px;
@@ -218,17 +230,10 @@ export default {
 }
 .part4_title {
   font-size: 38px;
+  line-height: 1;
+  margin-bottom: 68px;
 }
 
-.part2_content {
-  margin-top: 80px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-}
-.part_item {
-  width: 360px;
-}
 .hrmpart {
   align-self: stretch;
   margin-top: 175px;
@@ -261,7 +266,7 @@ export default {
   margin-bottom: 18px;
 }
 .item_content {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1;
   margin-bottom: 15px;
 }
@@ -334,4 +339,6 @@ export default {
     transform: scale3d(1, 1, 1);
   }
 }
+
+//test
 </style>
