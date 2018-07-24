@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import Index from '@/views/index'
 import Web from '@/views/web'
 import Download from '@/views/dowmload'
-import Service from '@/views/servicemanage'
-import AboutUs from '@/views/aboutus'
+import Servicecontent from '@/views/servicecontent'
+import Introduction from '@/views/introduction'
 Vue.use(Router)
 
 export default new Router({
@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Web',
-      redirect: '/aboutus',
+      redirect: '/Introduction',
       component: Web,
       children: [
         {
@@ -33,19 +33,19 @@ export default new Router({
           }
         },
         {
-          path: 'service',
-          name: 'Service',
-          component: Service,
+          path: 'servicecontent',
+          name: 'Servicecontent',
+          component: Servicecontent,
           meta: {
-            title: '下载中心'
+            title: '服务内容'
           }
         },
         {
-          path: 'aboutus',
-          name: 'AboutUs',
-          component: AboutUs,
+          path: 'introduction',
+          name: 'Introduction',
+          component: Introduction,
           meta: {
-            title: '关于我们'
+            title: '公司简介'
           }
         }
       ]
