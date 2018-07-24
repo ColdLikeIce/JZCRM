@@ -1,8 +1,8 @@
 <template>
   <div class="index">
-    <h3-banner :bgUrl="require('../assets/img/banner.png')">
+    <!-- <h3-banner :bgUrl="require('../assets/img/banner.png')">
 
-    </h3-banner>
+    </h3-banner> -->
     <div>
       <p class="introduce">{{ maintitle }}</p>
       <p class="subtitle">{{mainsubtitle}}</p>

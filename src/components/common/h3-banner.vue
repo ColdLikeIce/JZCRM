@@ -16,17 +16,8 @@ export default {
     }
   },
   data() {
-    return {
-      bgsrc:require('../../assets/img/banner.png') 
-    };
+    return {};
   },
-
-  components: {},
-
-  computed: {
-},
-
-  methods: {},
 }
 
 </script>
