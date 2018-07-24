@@ -1,51 +1,51 @@
 <template>
   <div class="index">
-    <h3-banner :bgUrl="require('../assets/img/banner.png')">
-
-    </h3-banner>
     <div>
       <p class="introduce">{{ maintitle }}</p>
       <p class="subtitle">{{mainsubtitle}}</p>
       <div class="part1">
         <div v-show='showpart' class="hrmpart">
+          <div>
+            <img src="../assets/img/02.png" alt="">
+          </div>
           <div class="item_name">{{hrmmsg.name}}</div>
           <div class="item_content">{{hrmmsg.content}}</div>
           <div class="item_fun1">{{hrmmsg.func1}}</div>
-          <div class="item_fun2">{{hrmmsg.func2}}</div>
-          <div class="item_button">
-            <a-button style="background:#388bff;color:#fff">查看更多</a-button>
-          </div>
+          <div class="item_fun1">{{hrmmsg.func2}}</div>
+          <a-button class="morebtn">查看更多</a-button>
         </div>
         <div class="phone">
           <img src="../assets/img/phone.png">
         </div>
         <div v-show='showpart'>
           <div class="crmpart">
+            <div>
+              <img src="../assets/img/01.png" alt="">
+            </div>
             <div class="item_name">{{crmmsg.name}}</div>
             <div class="item_content">{{crmmsg.content}}</div>
             <div class="item_fun1">{{crmmsg.func1}}</div>
-            <div class="item_fun2">{{crmmsg.func2}}</div>
-            <div class="item_button">
-              <a-button style="background:#388bff;color:#fff">查看更多</a-button>
-            </div>
+            <div class="item_fun1">{{crmmsg.func2}}</div>
+            <a-button class="morebtn">查看更多</a-button>
           </div>
           <div class="terppart">
+            <div>
+              <img src="../assets/img/03.png" alt="">
+            </div>
             <div class="item_name">{{terpmsg.name}}</div>
             <div class="item_content">{{terpmsg.content}}</div>
             <div class="item_fun1">{{terpmsg.func1}}</div>
-            <div class="item_fun2">{{terpmsg.func2}}</div>
-            <div class="item_button">
-              <a-button style="background:#388bff;color:#fff">查看更多</a-button>
-            </div>
+            <div class="item_fun1">{{terpmsg.func2}}</div>
+            <a-button class="morebtn">查看更多</a-button>
           </div>
         </div>
       </div>
     </div>
-    <div style="margin-top:125px">
+    <div class="part2">
       <p class="smalltitle">{{smalltitle1}}</p>
       <p class="smalltitle">{{smallsubtitle1}}</p>
-      <div class="part2">
-        <div class="part-item" v-for="(item,index) in part2list" :key="index">
+      <div class="part2_content">
+        <div class="part_item" v-for="(item,index) in part2list" :key="index">
           <div class="img_box">
             <img :src="item.imgurl">
           </div>
@@ -65,33 +65,29 @@
         </div>
       </div>
       <div class="rightpart">
-        <img style="height:460px" src="../assets/img/bg.png">
+        <img src="../assets/img/bg.png">
       </div>
     </div>
     <div class="part4">
-      <p style="font-size:38px;">专注服务中小企业 持续创造商业价值</p>
+      <p class="part4_title">专注服务中小企业 持续创造商业价值</p>
       <img src="../assets/img/company01.png">
       <img src="../assets/img/company02.png">
       <img src="../assets/img/company03.png">
-      <div style="margin-top:50px">
-        <a href="">查看更多</a>
+      <div class="lookmore">
+        <a href="">更多样例&nbsp&nbsp&gt</a>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import h3Banner from  '../components/common/h3-banner'
 export default {
   name: 'Index',
-  components:{
-    h3Banner
-  },
   data() {
     return {
       showpart: false,
       maintitle: '商业有战场，定胜有决招',
-      mainsubtitle: '决招--中小企业创新型Saas服务运营商',
+      mainsubtitle: '决招——中小企业创新型Saas服务运营商',
       smalltitle1: '阿里巴巴赋能决招',
       smallsubtitle1: '引领企业进入智能移动办公新时代',
       hrmmsg: {
@@ -153,8 +149,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 .index {
-  margin-top: 158px;
-  width: 1160px;
+  margin-top: 109px;
+  width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -162,70 +158,80 @@ export default {
   font-size: 40px;
   font-family: SourceHanSansCN-ExtraLight;
   color: rgba(0, 13, 76, 1);
+  margin-bottom: 39px;
+  line-height: 1;
 }
 .subtitle {
   font-size: 20px;
   font-family: SourceHanSansCN-ExtraLight;
   color: rgba(125, 132, 150, 1);
-  margin-top: 39px;
+  margin-bottom: 0;
 }
 .smalltitle {
-  font-size: 25px;
+  font-size: 38px;
   color: rgba(0, 13, 76, 1);
+  line-height: 1;
+  margin-bottom: 25px;
 }
 .phone {
-  margin-top: 100px;
+  margin-top: 212px;
 }
 .part1 {
-  height: 850px;
+  height: 930px;
   display: flex;
   justify-content: center;
 }
 .part2 {
+  margin-top: 124px;
+}
+.part3 {
+  margin-top: 130px;
+  height: 903px;
+  .rightpart {
+    float: right;
+    margin-top: 144px;
+    margin-right: 78px;
+  }
+  .leftpart {
+    float: left;
+    margin-top: 277px;
+    margin-left: 78px;
+    .left_item {
+      font-size: 40px;
+      margin-bottom: 18px;
+      line-height: 1;
+      text-align: left;
+      color: rgba(0, 13, 76, 1);
+    }
+    .left_button {
+      margin-top: 68px;
+      display: flex;
+      .button_item {
+        color: #ffffff;
+        background: #388bff;
+        width: 126px;
+        height: 44px;
+        margin-right: 60px;
+      }
+    }
+  }
+}
+.part4_title {
+  font-size: 38px;
+}
+
+.part2_content {
   margin-top: 80px;
   height: 300px;
   display: flex;
   justify-content: center;
 }
-.part3 {
-  margin-top: 130px;
-  height: 903px;
-}
-.left_button {
-  margin-top: 68px;
-  display: flex;
-}
-.button_item {
-  color: #ffffff;
-  background: #388bff;
-  width: 126px;
-  height: 44px;
-  margin-right: 60px;
-}
-.left_item {
-  font-size: 40px;
-  margin-bottom: 18px;
-  line-height: 1;
-  text-align: left;
-  color: rgba(0, 13, 76, 1);
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-.rightpart {
-  float: right;
-  margin-top: 144px;
-}
-.leftpart {
-  float: left;
-  margin-top: 277px;
-}
-.part-item {
+.part_item {
   width: 360px;
 }
 .hrmpart {
   align-self: stretch;
-  margin-top: 100px;
+  margin-top: 175px;
   width: 360px;
   height: 300px;
   display: flex;
@@ -236,20 +242,14 @@ export default {
 }
 
 .crmpart {
-  align-self: stretch;
-  margin-top: 50px;
-  width: 360px;
-  height: 300px;
+  margin-top: 61px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   animation: bounceIn 1s ease-in-out 0s 1 normal both;
 }
 .terppart {
-  align-self: stretch;
-  margin-top: 247px;
-  width: 360px;
-  height: 300px;
+  margin-top: 347px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -257,11 +257,13 @@ export default {
 }
 .item_name {
   font-size: 30px;
-  line-height: 40px;
+  line-height: 1;
+  margin-bottom: 18px;
 }
 .item_content {
   font-size: 15px;
-  line-height: 40px;
+  line-height: 1;
+  margin-bottom: 15px;
 }
 .content {
   font-size: 24px;
@@ -273,25 +275,26 @@ export default {
 }
 .item_fun1 {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1;
   color: rgba(125, 132, 150, 1);
+  margin-bottom: 5.5px;
 }
 
-.item_fun2 {
-  font-size: 14px;
-  line-height: 40px;
-  color: rgba(125, 132, 150, 1);
+.morebtn {
+  background: #388bff;
+  color: #fff;
+  margin-top: 14.5px;
 }
-.item_button {
-  font-size: 14px;
-  line-height: 30px;
-}
+
 .img_box {
   height: 178px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.lookmore {
+  margin-top: 50px;
 }
 /* export keyframes  */
 @keyframes bounceIn {
