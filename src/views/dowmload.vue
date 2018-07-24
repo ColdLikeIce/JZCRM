@@ -1,13 +1,13 @@
 <!--  -->
 <template>
-  <div>
-    <div>
-      <img src="../assets/img/banner.png" style="margin-top:141px;">
+  <div class="h_1043">
+    <div class="pic">
+      <img src="../assets/img/banner.png">
     </div>
     <div class="dowmload">
       <div :class="item.class" v-for="(item,index) in list" :key="index">
-        <img :src="item.imgurl" style="width:171px;height:171px">
-        <div style="margin-top:64px">
+        <img :src="item.imgurl">
+        <div class="top_64">
           <img :src="item.backimgurl">
         </div>
         <p class="title">{{item.title}}</p>
@@ -26,22 +26,22 @@ export default {
     return {
       list: [
         {
-          imgurl: require('../assets/img/CRMdowmload.png'),
-          backimgurl: require('../assets/img/CRM.png'),
+          imgurl: require('../assets/img/DowmLoad/CRMdowmload.png'),
+          backimgurl: require('../assets/img/DowmLoad/CRM.png'),
           title: '决招CRM',
           content: '全面优化企业销售流程',
           class: 'leftproduct'
         },
         {
-          imgurl: require('../assets/img/HRMdowmload.png'),
-          backimgurl: require('../assets/img/HRM.png'),
+          imgurl: require('../assets/img/DowmLoad/HRMdowmload.png'),
+          backimgurl: require('../assets/img/DowmLoad/HRM.png'),
           title: '决招HRM',
           content: '全面优化企业HR管理流程',
           class: 'centerproduct'
         },
         {
-          imgurl: require('../assets/img/TERPdowmload.png'),
-          backimgurl: require('../assets/img/Terp.png'),
+          imgurl: require('../assets/img/DowmLoad/TERPdowmload.png'),
+          backimgurl: require('../assets/img/DowmLoad/Terp.png'),
           title: '决招进销存',
           content: '全面优化企业进销存流程',
           class: 'rightproduct'
@@ -52,6 +52,15 @@ export default {
 }
 </script>
 <style lang='less' scoped>
+.h_1043 {
+  height: 1043px;
+}
+.top_64 {
+  margin-top: 64px;
+}
+.pic {
+  margin-top: 141px;
+}
 .dowmload {
   margin-top: 132px;
 }

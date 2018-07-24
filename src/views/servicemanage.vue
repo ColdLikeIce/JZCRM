@@ -1,52 +1,51 @@
 <!--  -->
 <template>
-  <div>
-    <div style="margin-top:100px">
-      <p class="title">
-        {{title}}
-      </p>
-      <div style="margin-top:114px;height:1200px">
-        <div v-for="(item,index) in list" :key="index">
-          <div v-if="index%2==0" class="single" style="height:185px;margin-top:85px;">
-            <div class="sleftpart">
-              <img :src="item.imgurl">
+  <div class="h_1750">
+    <p class="title">
+      {{title}}
+    </p>
+    <div class="totalpart">
+      <div v-for="(item,index) in list" :key="index">
+        <div v-if="index%2==0" class="partitem">
+          <div class="sleftpart">
+            <img :src="item.imgurl">
+          </div>
+          <div class="srightpart">
+            <div class="simgurl">
+              <img :src="item.numberurl">
             </div>
-            <div class="srightpart">
-              <div class="simgurl">
-                <img :src="item.numberurl">
+            <div class="sbottom">
+              <div class="theme">
+                {{item.title}}
               </div>
-              <div class="bottom">
-                <div class="theme">
-                  {{item.title}}
-                </div>
-                <div class="detail">
-                  {{item.content}}
-                </div>
+              <div class="detail">
+                {{item.content}}
               </div>
             </div>
           </div>
-          <div v-else class="double" style="margin-top:85px;height:185px">
-            <div class="dleftpart">
-              <div class="dimgurl">
-                <img :src="item.numberurl">
+        </div>
+        <div v-else class="partitem">
+          <div class="dleftpart">
+            <div class="dimgurl">
+              <img :src="item.numberurl">
+            </div>
+            <div class="dbottom">
+              <div class="theme">
+                {{item.title}}
               </div>
-              <div class="dbottom">
-                <div class="theme">
-                  {{item.title}}
-                </div>
-                <div class="detail">
-                  {{item.content}}
-                </div>
+              <div class="detail">
+                {{item.content}}
               </div>
             </div>
-            <div class="drightpart">
-              <img :src="item.imgurl">
-            </div>
+          </div>
+          <div class="drightpart">
+            <img :src="item.imgurl">
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -96,9 +95,20 @@ export default {
 }
 </script>
 <style lang='less' scoped>
+.h_1750 {
+  margin-top: 100px;
+  height: 1750px;
+}
 .title {
   font-size: 40px;
   color: rgba(0, 13, 76, 1);
+}
+.partitem {
+  margin-top: 85px;
+  height: 185px;
+}
+.totalpart {
+  margin-top: 114px;
 }
 .sleftpart {
   float: left;
@@ -110,7 +120,7 @@ export default {
   margin-left: 74px;
   height: 200px;
 }
-.bottom {
+.sbottom {
   clear: both;
   text-align: left;
   margin-left: 322px;
@@ -126,10 +136,6 @@ export default {
 .drightpart {
   float: left;
   margin-left: 232px;
-}
-.numberurl {
-  float: left;
-  margin-left: 295px;
 }
 .simgurl {
   float: left;
