@@ -90,6 +90,7 @@ export default {
   watch:{
      '$route':{
                 handler:function(val,oldval){
+                  debugger;
                     this.resource = staticData[val.name]
                 },
                 immediate:true,
