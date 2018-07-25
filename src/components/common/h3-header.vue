@@ -2,7 +2,7 @@
 <template>
   <div class="header wraper">
     <div>
-      <img src="../../assets/img/logo.png" alt="logo">
+      <img class="jzlogo" src="../../assets/img/logo.png" alt="logo">
       <img src="../../assets/img/ding.png" alt="dingding">
     </div>
     <div class="menu">
@@ -110,13 +110,23 @@ export default {
   display: flex;
   align-items: center;
   color: @fontColor;
+  .jzlogo{
+    margin-right: 18px;
+  }
 }
 .ant-menu-horizontal {
   border: none;
+  .ant-menu{
+    font-size: 16px;
+    font-family:SourceHanSansCN-Light;
+  }
 }
-.ant-menu-item,.ant-menu-submenu{
+.ant-menu-horizontal  .ant-menu-item,.ant-menu-horizontal  .ant-menu-submenu{
   padding: 0 5px;
-  margin: 0 15px;
+  margin: 0 17px;
+}
+.ant-menu-horizontal /deep/ .ant-menu-submenu .ant-menu-submenu-title{
+  padding: 0;
 }
 .ant-menu-sub .ant-menu-item{
  padding-left:15px 
@@ -133,7 +143,7 @@ export default {
 }
 .ant-menu-horizontal > .ant-menu-item.ant-menu-item-selected,
 .ant-menu-horizontal > .ant-menu-submenu.ant-menu-submenu-selected {
-  border-bottom: 2px solid @primary-color;
+  border-bottom: 3px solid @primary-color;
   color: @primary-color;
 }
 .menu {
@@ -144,16 +154,12 @@ export default {
   }
 }
 .btnGround {
-  margin-left: 20px;
+  margin-left: 40px;
   position: relative;
   top: -3px;
   .ant-btn {
     &:first-of-type {
       margin-right: 22px;
-    }
-    &:hover {
-      color: @primary-color;
-      border-color: @primary-color;
     }
   }
   .ant-btn-primary {
