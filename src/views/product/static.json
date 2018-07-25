@@ -1,114 +1,407 @@
-{  
-  "common":{
-   "img":"/static/img/Mapping.png",
-   "title":"氚云支撑  灵活定制",
-   "content":"在互联网的浪潮之下，市场瞬息万变，企业的商业模式也随之革新，传统意义上“标准”的SaaS应用已无法满足企业快速发展的需求。而决招产品，依托于氚云Paas强大的技术实力，可根据企业所需灵活定制个性化功能，进行应用的无限拓展，让您的信息化管理随需而变，快人一步。"
+{
+  "common": {
+    "img": "/static/img/Mapping.png",
+    "title": "氚云支撑  灵活定制",
+    "content": "在互联网的浪潮之下，市场瞬息万变，企业的商业模式也随之革新，传统意义上“标准”的SaaS应用已无法满足企业快速发展的需求。而决招产品，依托于氚云Paas强大的技术实力，可根据企业所需灵活定制个性化功能，进行应用的无限拓展，让您的信息化管理随需而变，快人一步。"
   },
   "crm": {
     "banner": "/static/img/product_crm/banner_crm.png",
-    "advantage":{
-      "title":"决招CRM三大优势",
-      "list":[
+    "advantage": {
+      "title": "决招CRM三大优势",
+      "list": [
         {
-          "img":"/static/img/product_crm/icon_01.png",
-          "slogan":["全程管理客户","把握每个商机"],
-          "content":["销售线索管理，目标客户识别，销售机会挖掘","销售机会跟踪，销售订单执行，客户关系维护"]
+          "img": "/static/img/product_crm/icon_01.png",
+          "slogan": [
+            "全程管理客户",
+            "把握每个商机"
+          ],
+          "content": [
+            "销售线索管理，目标客户识别，销售机会挖掘",
+            "销售机会跟踪，销售订单执行，客户关系维护"
+          ]
         },
         {
-          "img":"/static/img/product_crm/icon_02.png",
-          "slogan":["行动量化管理","掌控销售全局"],
-          "content":["销售过程可视化，销售任务明确化，问题处理及时化","客户分配合理化，跟进策略差异化，资源利用最大化"]
+          "img": "/static/img/product_crm/icon_02.png",
+          "slogan": [
+            "行动量化管理",
+            "掌控销售全局"
+          ],
+          "content": [
+            "销售过程可视化，销售任务明确化",
+            "问题处理及时化",
+            "客户分配合理化，跟进策略差异化",
+            "资源利用最大化"
+          ]
         },
         {
-          "img":"/static/img/product_crm/icon_03.png",
-          "slogan":["改善销售能力","提升销售业绩"],
-          "content":["销售流程化繁为简，提升销售人员工作效率","销售资源合理配置，提升销售人员整体业绩"]
+          "img": "/static/img/product_crm/icon_03.png",
+          "slogan": [
+            "改善销售能力",
+            "提升销售业绩"
+          ],
+          "content": [
+            "销售流程化繁为简，提升销售人员工作效率",
+            "销售资源合理配置，提升销售人员整体业绩"
+          ]
         }
       ]
-
     },
-    "core":{
-      "type":"决招CRM",
-      "title":"决招CRM核心功能",
-      "rowNum":5,
-      "list":[
-        { "id":0,
-          "icon":"/static/img/product_crm/01.png",
-          "activeColor":"#5CABFF",
-          "title":"销售线索",
-          "introduction":"销售线索一键导入，线索池多维度管理，优化资源配置，提升线索转化率",
-          "imgList":["/static/img/Mapping.png","/static/img/Mapping.png"]
+    "core": {
+      "type": "决招CRM",
+      "title": "决招CRM核心功能",
+      "rowNum": 5,
+      "list": [
+        {
+          "id": 0,
+          "icon": "/static/img/product_crm/01.png",
+          "activeColor": "#5CABFF",
+          "title": "销售线索",
+          "introduction": "销售线索一键导入，线索池多维度管理，优化资源配置，提升线索转化率",
+          "imgList": "/static/img/product_crm/xsxs.png"
         },
-        { "id":1,
-          "icon":"/static/img/product_crm/02.png",
-          "activeColor":"#FF775A",
-          "title":"客户",
-          "introduction":"客户的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 1,
+          "icon": "/static/img/product_crm/02.png",
+          "activeColor": "#FF775A",
+          "title": "客户",
+          "introduction": "客户信息分级分类，客户画像生命周期管理，沉淀宝贵客户资源；客户公海池让静态存储客户转为动态流转的价值客户。",
+          "imgList": "/static/img/product_crm/custom.png"
         },
-        { "id":2,
-          "icon":"/static/img/product_crm/03.png",
-          "activeColor":"#93D45F",
-          "title":"销售机会",
-          "introduction":"销售机会的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 2,
+          "icon": "/static/img/product_crm/03.png",
+          "activeColor": "#93D45F",
+          "title": "销售机会",
+          "introduction": "精准把握客户商机，按个人、部门、全公司统计漏斗分析，掌握商机转化率、赢单情况。",
+          "imgList": "/static/img/product_crm/xsjh.png"
         },
-        { "id":3,
-          "icon":"/static/img/product_crm/04.png",
-          "activeColor":"#63D9D3",
-          "title":"合同协议",
-          "introduction":"合同协议的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 3,
+          "icon": "/static/img/product_crm/04.png",
+          "activeColor": "#63D9D3",
+          "title": "合同协议",
+          "introduction": "成交客户合同协议无纸化流程审批，提高工作效率；销售业绩准确统计。",
+          "imgList": "/static/img/product_crm/Mapping.png"
         },
-        { "id":4,
-          "icon":"/static/img/product_crm/05.png",
-          "activeColor":"#FFB75E",
-          "title":"销售订单",
-          "introduction":"销售订单的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 4,
+          "icon": "/static/img/product_crm/05.png",
+          "activeColor": "#FFB75E",
+          "title": "销售订单",
+          "introduction": "随时随地手机下单，支持扫码查询，一键打印订单，高效订单管理流程。",
+          "imgList": "/static/img/product_crm/xsdd.png"
         },
-        { "id":5,
-          "icon":"/static/img/product_crm/06.png",
-          "activeColor":"#FF775A",
-          "title":"回款",
-          "introduction":"回款的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 5,
+          "icon": "/static/img/product_crm/06.png",
+          "activeColor": "#FF775A",
+          "title": "回款",
+          "introduction": "销售回款计划，管理销售回款情况，保障企业财务零出错。",
+          "imgList": "/static/img/product_crm/hk.png"
         },
-        { "id":6,
-          "icon":"/static/img/product_crm/07.png",
-          "activeColor":"#93D45F",
-          "title":"销售发票",
-          "introduction":"销售发票的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 6,
+          "icon": "/static/img/product_crm/07.png",
+          "activeColor": "#93D45F",
+          "title": "销售发票",
+          "introduction": "销售发票管理，避免错开票、重复开票，减少企业成本，提高流程效率。",
+          "imgList": "/static/img/product_crm/xsfp.png"
         },
-        { "id":7,
-          "icon":"/static/img/product_crm/08.png",
-          "activeColor":"#5CABFF",
-          "title":"跟进记录",
-          "introduction":"跟进记录的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 7,
+          "icon": "/static/img/product_crm/08.png",
+          "activeColor": "#5CABFF",
+          "title": "跟进记录",
+          "introduction": "有效管理客户拜访全过程，历史记录随时查看，沉淀客户拜访数据，精准营销提高销售成单率。",
+          "imgList": "/static/img/product_crm/gjjl.png"
         },
-        { "id":8,
-          "icon":"/static/img/product_crm/09.png",
-          "activeColor":"#63D9D3",
-          "title":"任务与计划",
-          "introduction":"任务与计划的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 8,
+          "icon": "/static/img/product_crm/09.png",
+          "activeColor": "#63D9D3",
+          "title": "任务与计划",
+          "introduction": "协助销售人员制定拜访计划，高效规划拜访路线，每天跟进客户不遗漏。",
+          "imgList": "/static/img/product_crm/rwjh.png"
         },
-        { "id":9,
-          "icon":"/static/img/product_crm/10.png",
-          "activeColor":"#FFB75E",
-          "title":"业绩预测",
-          "introduction":"业绩预测的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+        {
+          "id": 9,
+          "icon": "/static/img/product_crm/10.png",
+          "activeColor": "#FFB75E",
+          "title": "业绩预测",
+          "introduction": "根据销售情况，为个人、部门发布销售计划，统计业务完成情况，提高销售业绩和团队执行力。",
+          "imgList": "/static/img/product_crm/ywyc.png"
         }
       ]
     }
   },
   "hrm": {
-    "banner": "/static/img/product_hrm/banner_hr.png"
+    "banner": "/static/img/product_hrm/banner_hr.png",
+    "advantage": {
+      "title": "决招HRM四大优势",
+      "list": [
+        {
+          "img": "/static/img/product_hrm/hr_icon_01.png",
+          "slogan": [
+            "HR智能化办公",
+            "效率提升300%"
+          ],
+          "content": [
+            "在线办理新员工入职手续",
+            "自动生成员工档案",
+            "员工档案及变动全面记录",
+            "任职信息随时查阅",
+            "员工转正、合同到期",
+            "生日提醒，HR了如指掌"
+          ]
+        },
+        {
+          "img": "/static/img/product_hrm/hr_icon_02.png",
+          "slogan": [
+            "薪酬计算便捷",
+            "一键生成报表"
+          ],
+          "content": [
+            "支持补贴、福利等薪酬计算规则",
+            "员工工资一键计算",
+            "自动生成工资条,省时省力",
+            "薪酬月报输出",
+            "解析企业用人成本，控制预算"
+          ]
+        },
+        {
+          "img": "/static/img/product_hrm/hr_icon_03.png",
+          "slogan": [
+            "告别纸质表单",
+            "员工全程自助"
+          ],
+          "content": [
+            "员工可在线请假、加班、调岗、调薪、离职等申请",
+            "不用再到处找表单",
+            "而且可随时查看流程动态",
+            "管理者审批便捷，HR统计方便。"
+          ]
+        },
+        {
+          "img": "/static/img/product_hrm/hr_icon_04.png",
+          "slogan": [
+            "深度对接钉钉",
+            "功能模块有效整合"
+          ],
+          "content": [
+            "基于与钉钉的战略合作，",
+            "在功能模块上与钉钉现有的功能",
+            "实现深度的对接，兼容通讯录、",
+            "考勤结果等数据和信息流，",
+            "实现企业敏捷高效办公。"
+          ]
+        }
+      ]
+    },
+    "core": {
+      "type": "决招HRM",
+      "title": "决招HRM核心功能",
+      "rowNum": 5,
+      "list": [
+        {
+          "id": 0,
+          "icon": "/static/img/product_hrm/01.png",
+          "activeColor": "#5CABFF",
+          "title": "员工花名册",
+          "introduction": "记录员工入转调离，掌握员工在企业的成长情况，节约企业管理成本",
+          "imgList": "/static/img/product_hrm/hmc.png"
+        },
+        {
+          "id": 1,
+          "icon": "/static/img/product_hrm/02.png",
+          "activeColor": "#FFB75E",
+          "title": "合同管理",
+          "introduction": "记录签订情况并对合同的变更、续签、解除、终止进行跟踪管理，提前预警企业用工风险，降低风险。",
+          "imgList": "/static/img/product_hrm/htgl.png"
+        },
+        {
+          "id": 2,
+          "icon": "/static/img/product_hrm/03.png",
+          "activeColor": "#FF775A",
+          "title": "薪酬核算",
+          "introduction": "根据企业需求内置薪酬正反两种计算规则，支持员工入离职、调薪时分段计薪的业务场景，一键计算工资，对薪资进行成本分析。",
+          "imgList": "/static/img/product_hrm/xchs.png"
+        },
+        {
+          "id": 3,
+          "icon": "/static/img/product_hrm/04.png",
+          "activeColor": "#93D45F",
+          "title": "定薪调薪",
+          "introduction": "简单快速对员工进行定调薪，记录员工薪酬为调薪提供参考依据。",
+          "imgList": "/static/img/product_hrm/dxtx.png"
+        },
+        {
+          "id": 4,
+          "icon": "/static/img/product_hrm/05.png",
+          "activeColor": "#63D9D3",
+          "title": "工资条",
+          "introduction": "改变传统工资条发放，一秒搞定工资条发放。",
+          "imgList": "/static/img/product_hrm/gzt.png"
+        }
+      ]
+    }
   },
   "jxc": {
-    "banner": "/static/img/product_jxc/banner.png"
+    "banner": "/static/img/product_jxc/banner.png",
+    "advantage": {
+      "title": "决招进销存四大优势",
+      "list": [
+        {
+          "img": "/static/img/product_jxc/jxc_icon_01.png",
+          "slogan": [
+            "采购管理简单化"
+          ],
+          "content": [
+            "精细化控制采购成本，",
+            "轻松连接供应商。",
+            "掌握每个采购商品情况，",
+            "有效控制商品采购质量。"
+          ]
+        },
+        {
+          "img": "/static/img/product_jxc/jxc_icon_02.png",
+          "slogan": [
+            "库存管理准确化"
+          ],
+          "content": [
+            "库存数量一目了然，",
+            "库存明细实时查询，",
+            "库存盘点、仓库调拨、库存预警，",
+            "实现智能化管理。"
+          ]
+        },
+        {
+          "img": "/static/img/product_jxc/jxc_icon_03.png",
+          "slogan": [
+            "销售管理高效化"
+          ],
+          "content": [
+            "全方位精细化管理销售过程，",
+            "提高销售业绩。",
+            "准确把握价格政策，",
+            "不同客户匹配不同价格政策。"
+          ]
+        },
+        {
+          "img": "/static/img/product_jxc/jxc_icon_04.png",
+          "slogan": [
+            "财务管理精细化"
+          ],
+          "content": [
+            "全面的预售、预付、采购、",
+            "销售资金管理。",
+            "每月收支情况一目了然，",
+            "尽在掌控。"
+          ]
+        }
+      ]
+    },
+    "core": {
+      "type": "决招进销存",
+      "title": "决招进销存核心功能",
+      "rowNum": 6,
+      "list": [
+        {
+          "id": 0,
+          "icon": "/static/img/product_jxc/01.png",
+          "activeColor": "#5CABFF",
+          "title": "销售目标",
+          "introduction": "记录员工入转调离，掌握员工在企业的成长情况，节约企业管理成本",
+          "imgList": "/static/img/product_jxc/xsmb.png"
+        },
+        {
+          "id": 1,
+          "icon": "/static/img/product_jxc/02.png",
+          "activeColor": "#FFB75E",
+          "title": "销售订单执行表",
+          "introduction": "客户的功能简介",
+          "imgList": "/static/img/product_jxc/xsdd.png"
+        },
+        {
+          "id": 2,
+          "icon": "/static/img/product_jxc/03.png",
+          "activeColor": "#FF775A",
+          "title": "销售趋势",
+          "introduction": "销售机会的功能简介",
+          "imgList": "/static/img/product_jxc/xsqs.png"
+        },
+        {
+          "id": 3,
+          "icon": "/static/img/product_jxc/04.png",
+          "activeColor": "#93D45F",
+          "title": "采购订单执行表",
+          "introduction": "合同协议的功能简介",
+          "imgList": "/static/img/product_jxc/cgdd.png"
+        },
+        {
+          "id": 4,
+          "icon": "/static/img/product_jxc/05.png",
+          "activeColor": "#63D9D3",
+          "title": "采购需求分析",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/cgxq.png"
+        },
+        {
+          "id": 5,
+          "icon": "/static/img/product_jxc/06.png",
+          "activeColor": "#63D9D3",
+          "title": "仓库调拨",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/cktb.png"
+        },
+        {
+          "id": 6,
+          "icon": "/static/img/product_hrm/07.png",
+          "activeColor": "#63D9D3",
+          "title": "库存预警",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/kcyj.png"
+        },
+        {
+          "id": 7,
+          "icon": "/static/img/product_hrm/08.png",
+          "activeColor": "#63D9D3",
+          "title": "采购入库统计",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/cgrk.png"
+        },
+        {
+          "id": 8,
+          "icon": "/static/img/product_jxc/09.png",
+          "activeColor": "#63D9D3",
+          "title": "资金调拨",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/zjtb.png"
+        },
+        {
+          "id": 9,
+          "icon": "/static/img/product_jxc/10.png",
+          "activeColor": "#63D9D3",
+          "title": "应付款分析",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/yfk.png"
+        },
+        {
+          "id": 10,
+          "icon": "/static/img/product_hrm/11.png",
+          "activeColor": "#63D9D3",
+          "title": "应收款分析",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_hrm/ysk.png"
+        },
+        {
+          "id": 11,
+          "icon": "/static/img/product_jxc/12.png",
+          "activeColor": "#63D9D3",
+          "title": "商品毛利分析",
+          "introduction": "销售订单的功能简介",
+          "imgList": "/static/img/product_jxc/spml.png"
+        }
+      ]
+    }
   }
 }

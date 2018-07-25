@@ -1,57 +1,61 @@
 <!--  -->
 <template>
-  <div class="h_1750">
-    <p class="title">
-      {{title}}
-    </p>
-    <div class="totalpart">
-      <div v-for="(item,index) in list" :key="index">
-        <div v-if="index%2==0" class="partitem">
-          <div class="sleftpart">
-            <img :src="item.imgurl">
-          </div>
-          <div class="srightpart">
-            <div class="simgurl">
-              <img :src="item.numberurl">
+  <div>
+    <h3-banner :bgUrl="bannerimg"></h3-banner>
+    <div class="h_1750">
+      <p class="title">
+        {{title}}
+      </p>
+      <div class="totalpart">
+        <div v-for="(item,index) in list" :key="index">
+          <div v-if="index%2==0" class="partitem">
+            <div class="sleftpart">
+              <img :src="item.imgurl">
             </div>
-            <div class="sbottom">
-              <div class="theme">
-                {{item.title}}
+            <div class="srightpart">
+              <div class="simgurl">
+                <img :src="item.numberurl">
               </div>
-              <div class="detail">
-                {{item.content}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div v-else class="partitem">
-          <div class="dleftpart">
-            <div class="dimgurl">
-              <img :src="item.numberurl">
-            </div>
-            <div class="dbottom">
-              <div class="theme">
-                {{item.title}}
-              </div>
-              <div class="detail">
-                {{item.content}}
+              <div class="sbottom">
+                <div class="theme">
+                  {{item.title}}
+                </div>
+                <div class="detail">
+                  {{item.content}}
+                </div>
               </div>
             </div>
           </div>
-          <div class="drightpart">
-            <img :src="item.imgurl">
+          <div v-else class="partitem">
+            <div class="dleftpart">
+              <div class="dimgurl">
+                <img :src="item.numberurl">
+              </div>
+              <div class="dbottom">
+                <div class="theme">
+                  {{item.title}}
+                </div>
+                <div class="detail">
+                  {{item.content}}
+                </div>
+              </div>
+            </div>
+            <div class="drightpart">
+              <img :src="item.imgurl">
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
+import h3Banner from '../../components/common/h3-banner'
 export default {
   data() {
     return {
+      bannerimg:'/static/img/ServiceManage/banner.png',
       title: '五大服务保障，只为您更安心的使用决招产品',
       list: [
         {
@@ -91,6 +95,9 @@ export default {
         }
       ]
     }
+  },
+  components: {
+    h3Banner
   }
 }
 </script>
