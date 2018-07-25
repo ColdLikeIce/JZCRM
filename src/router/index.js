@@ -2,15 +2,18 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/index'
 import Web from '@/views/web'
-import Download from '@/views/download'
-import Servicecontent from '@/views/servicecontent'
-import Introduction from '@/views/introduction'
-import CustomCase from '@/views/customcase'
+import Download from '@/views/download/download'
+import Servicecontent from '@/views/server/serviceContent'
+import Introduction from '@/views/about/introduction'
+import CustomCase from '@/views/customCase/customCase'
 import Product from '@/views/product/product'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -28,15 +31,15 @@ export default new Router({
         },
         {
           path: 'download',
-          name: 'Download',
+          name: 'download',
           component: Download,
           meta: {
             title: '下载中心'
           }
         },
         {
-          path: 'servicecontent',
-          name: 'Servicecontent',
+          path: '/server/content',
+          name: 'servicecontent',
           component: Servicecontent,
           meta: {
             title: '服务内容'
@@ -44,15 +47,15 @@ export default new Router({
         },
         {
           path: 'introduction',
-          name: 'Introduction',
+          name: 'introduction',
           component: Introduction,
           meta: {
             title: '公司简介'
           }
         },
         {
-          path: 'customcase',
-          name: 'CustomCase',
+          path: 'customerCase',
+          name: 'customerCase',
           component: CustomCase,
           meta: {
             title: '客户案例'
@@ -79,6 +82,22 @@ export default new Router({
           component: Product,
           meta: {
             title: '决招进销存'
+          }
+        },
+        {
+          path: '/about/introduction',
+          name: 'introduction',
+          component: Introduction,
+          meta: {
+            title: '企业简介'
+          }
+        },
+        {
+          path: '/about/news',
+          name: 'news',
+          component: Product,
+          meta: {
+            title: '新闻中心'
           }
         }
       ]
