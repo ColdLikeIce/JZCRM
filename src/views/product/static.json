@@ -37,70 +37,70 @@
           "activeColor":"#5CABFF",
           "title":"销售线索",
           "introduction":"销售线索一键导入，线索池多维度管理，优化资源配置，提升线索转化率",
-          "imgList":["/static/img/Mapping.png","/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":1,
           "icon":"/static/img/product_crm/02.png",
           "activeColor":"#FF775A",
           "title":"客户",
           "introduction":"客户的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":2,
           "icon":"/static/img/product_crm/03.png",
           "activeColor":"#93D45F",
           "title":"销售机会",
           "introduction":"销售机会的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":3,
           "icon":"/static/img/product_crm/04.png",
           "activeColor":"#63D9D3",
           "title":"合同协议",
           "introduction":"合同协议的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":4,
           "icon":"/static/img/product_crm/05.png",
           "activeColor":"#FFB75E",
           "title":"销售订单",
           "introduction":"销售订单的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":5,
           "icon":"/static/img/product_crm/06.png",
           "activeColor":"#FF775A",
           "title":"回款",
           "introduction":"回款的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":6,
           "icon":"/static/img/product_crm/07.png",
           "activeColor":"#93D45F",
           "title":"销售发票",
           "introduction":"销售发票的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":7,
           "icon":"/static/img/product_crm/08.png",
           "activeColor":"#5CABFF",
           "title":"跟进记录",
           "introduction":"跟进记录的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":8,
           "icon":"/static/img/product_crm/09.png",
           "activeColor":"#63D9D3",
           "title":"任务与计划",
           "introduction":"任务与计划的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         },
         { "id":9,
           "icon":"/static/img/product_crm/10.png",
           "activeColor":"#FFB75E",
           "title":"业绩预测",
           "introduction":"业绩预测的功能简介",
-          "imgList":["/static/img/Mapping.png"]
+          "imgList":"/static/img/Mapping.png"
         }
       ]
     }

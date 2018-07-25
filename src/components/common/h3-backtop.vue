@@ -37,10 +37,10 @@ export default {
       let oTop = document.body.scrollTop || document.documentElement.scrollTop;
       if(oTop > 0){
       document.body.scrollTop = document.documentElement.scrollTop = 0.8*oTop;
-      timer = requestAnimationFrame(this.animate);
+      this.timer = requestAnimationFrame(this.animate);
       }else{
       cancelAnimationFrame(this.timer);
-      this.timer = null;
+      this.timer = null
       } 
     }
   },

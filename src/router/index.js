@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Index from '@/views/index'
 import Web from '@/views/web'
 import Download from '@/views/download/download'
-import Servicecontent from '@/views/server/serviceContent'
+import Servercontent from '@/views/server/serverContent'
 import Introduction from '@/views/about/introduction'
 import CustomCase from '@/views/customCase/customCase'
 import Product from '@/views/product/product'
@@ -30,6 +30,30 @@ export default new Router({
           }
         },
         {
+          path: '/product/jzcrm',
+          name: 'crm',
+          component: Product,
+          meta: {
+            title: '决招CRM'
+          }
+        },
+        {
+        path: '/product/jzhrm',
+        name: 'hrm',
+        component: Product,
+        meta: {
+          title: '决招HRM'
+          }
+        },
+        {
+        path: '/product/jzjxc',
+        name: 'jxc',
+        component: Product,
+        meta: {
+          title: '决招进销存'
+          }
+        },
+        {
           path: 'download',
           name: 'download',
           component: Download,
@@ -39,18 +63,10 @@ export default new Router({
         },
         {
           path: '/server/content',
-          name: 'servicecontent',
-          component: Servicecontent,
+          name: 'servercontent',
+          component: Servercontent,
           meta: {
             title: '服务内容'
-          }
-        },
-        {
-          path: 'introduction',
-          name: 'introduction',
-          component: Introduction,
-          meta: {
-            title: '公司简介'
           }
         },
         {
@@ -59,29 +75,6 @@ export default new Router({
           component: CustomCase,
           meta: {
             title: '客户案例'
-          }
-        },{
-            path: '/product/jzcrm',
-            name: 'crm',
-            component: Product,
-            meta: {
-              title: '决招CRM'
-            }
-          },
-        {
-          path: '/product/jzhrm',
-          name: 'hrm',
-          component: Product,
-          meta: {
-            title: '决招HRM'
-          }
-        },
-        {
-          path: '/product/jzjxc',
-          name: 'jxc',
-          component: Product,
-          meta: {
-            title: '决招进销存'
           }
         },
         {
