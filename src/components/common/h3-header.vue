@@ -6,18 +6,18 @@
       <img src="../../assets/img/ding.png" alt="dingding">
     </div>
     <div class="menu">
-    <a-menu class="menuList" v-model="current" mode="horizontal" >
-      <template v-for ="(item,index) in menu">
-        <a-menu-item v-if ="!item.children" :key="item.path" @click.native="openLink(item.path)">{{item.name}}</a-menu-item>
-        <a-sub-menu v-else :key="item.path">
-        <span slot="title">{{item.name}}</span>
-          <a-menu-item v-for ="(itm,index)  in item.children" :key="itm.path" @click.native="openLink(itm.path)">{{itm.name}}</a-menu-item>
-        </a-sub-menu>
-      </template>
-  </a-menu>
+      <a-menu class="menuList" v-model="current" mode="horizontal" >
+          <template v-for ="(item,index) in menu">
+            <a-menu-item v-if ="!item.children" :key="item.path" @click.native="openLink(item.path)">{{item.name}}</a-menu-item>
+            <a-sub-menu v-else :key="item.path">
+            <span slot="title">{{item.name}}</span>
+              <a-menu-item v-for ="(itm,index)  in item.children" :key="itm.path" @click.native="openLink(itm.path)">{{itm.name}}</a-menu-item>
+            </a-sub-menu>
+          </template>
+      </a-menu>
     </div>
     <div class="btnGround">
-      <a-button>登录</a-button>
+      <a-button class="login" type="primary" ghost>登录</a-button>
       <a-button type="primary">注册</a-button>
     </div>
   </div>
@@ -53,12 +53,12 @@ export default {
           ]
         },
         {
-          name:'下载中心',
-          path:'/download'
-        },
-        {
           name:'客户案例',
           path:'/customerCase'
+        },
+         {
+          name:'下载中心',
+          path:'/download'
         },
         {
           name: '服务',
@@ -114,6 +114,13 @@ export default {
 .ant-menu-horizontal {
   border: none;
 }
+.ant-menu-item,.ant-menu-submenu{
+  padding: 0 5px;
+  margin: 0 15px;
+}
+.ant-menu-sub .ant-menu-item{
+ padding-left:15px 
+}
 .ant-menu-horizontal > .ant-menu-item:hover,
 .ant-menu-horizontal > .ant-menu-submenu:hover,
 .ant-menu-horizontal > .ant-menu-item,
@@ -137,6 +144,7 @@ export default {
   }
 }
 .btnGround {
+  margin-left: 20px;
   position: relative;
   top: -3px;
   .ant-btn {
@@ -151,9 +159,12 @@ export default {
   .ant-btn-primary {
     background-color: @primary-color;
     border-color: @primary-color;
-    &:hover {
-      color: #fff;
+  }
+   .login{
+      color:@primary-color;
     }
+   .ant-btn{
+    width:94px; 
   }
 }
 </style>

@@ -5,7 +5,7 @@
     <div class="advantage wraper">
       <h3 class="advantage_title">{{resource.advantage.title}}</h3>
       <ul class="list">
-        <li class="advantage_item" v-for="(item,index) in  resource.advantage.list" :key="index">
+        <li :class="{'advantage_itemgt3':resource.advantage.list.length>3}" class="advantage_item" v-for="(item,index) in  resource.advantage.list" :key="index">
           <img :src="item.img" alt="icon">
           <h4 v-for="(sloganItem,sloganIndex) in item.slogan" :key="sloganIndex+'slogan'">{{sloganItem}}</h4>
           <p v-for="(contentItem,contentIndex) in item.content" :key="contentIndex+'content'">{{contentItem}}</p>
@@ -22,7 +22,7 @@
           <ul class="coreList_wrap" v-for="n in row" :key="n">
             <template v-for="(item,index) in resource.core.list">
               <li v-if="n*(resource.core.rowNum)>item.id&&item.id>=(n-1)*(resource.core.rowNum)">
-                <div :style="activeStyle(item.id)" class="iconBox" @click="coreSelect(item.id)">
+                <div :style="activeStyle(item.id)" class="iconBox" @mouseover="coreHover(item.id)" @mouseout="coreLink()" @click="coreSelect(item.id)">
                   <img class="coreList_icon" :src="item.icon" alt="icon">
                 </div>
                 <p>{{item.title}}</p>
@@ -31,18 +31,18 @@
           </ul>
         </div>
         <div class="coreShow">
-          <h4>{{coreShow.title}}</h4>
-          <p>{{coreShow.introduction}}</p>
+          <h4 class="coreShowTitle">{{coreShow.title}}</h4>
+          <p class="introduction">{{coreShow.introduction}}</p>
           <div class="coreImgBox">
-            <span v-show="coreShow.imgList.length>1" @click="checkoutImg('pre')" class="imgBtn pre">
+            <span v-show="coreImgList.length>1" @click="checkoutImg('pre')" :class="{'disabled':currentId===0}" class="imgBtn pre">
               <a-icon type="left" />
             </span>
             <div class="coreImgView">
-              <ul class="imgList" :style="`width:${800*coreShow.imgList.length}px;transform:translateX(${-imgindex/coreShow.imgList.length*100}%)`">
-                <li class="imgListItem" v-for="(item ,index) in coreShow.imgList" :style="`background-image:url(${item})`"></li>
+              <ul class="imgList" :style="`width:${800*coreImgList.length}px;transform:translateX(${-currentId/coreImgList.length*100}%)`">
+                <li class="imgListItem" v-for="(item ,index) in coreImgList" :style="`background-image:url(${item})`"></li>
               </ul>
             </div>
-            <span v-show="coreShow.imgList.length>1" @click="checkoutImg('next')" class="imgBtn next">
+            <span v-show="coreImgList.length>1" @click="checkoutImg('next')" :class="{'disabled':currentId===coreImgList.length-1}" class="imgBtn next">
               <a-icon type="right" />
             </span>
           </div>
@@ -63,7 +63,7 @@
 
 <script>
 import staticData from './static'
-import h3Banner from '../../components/common/h3-banner'
+import h3Banner from '@/components/common/h3-banner'
 export default {
   name: 'h3product',
   data() {
@@ -71,15 +71,13 @@ export default {
       resource: staticData.crm,
       common: staticData.common,
       currentId: 0,
-      imgindex: 0
+      hoverIndex: null
     }
   },
 
   components: {
     h3Banner
   },
-
-  created() {},
 
   computed: {
     row() {
@@ -89,32 +87,51 @@ export default {
     },
     coreShow() {
       return this.resource.core.list[this.currentId]
+    },
+    coreImgList() {
+      let arr = []
+      this.resource.core.list.forEach(item => {
+        arr.push(item.imgList)
+      })
+      return arr
     }
   },
 
   watch: {
     $route: {
       handler: function(val, oldval) {
-        debugger
-        this.resource = staticData[val.name]
+        ;(this.currentId = 0),
+          (this.hoverIndex = null),
+          (this.resource = staticData[val.name])
       },
       immediate: true
     }
   },
-
-  mounted() {},
 
   methods: {
     download() {
       this.$router.push({ path: '/download' })
     },
     coreSelect(id) {
-      this.currentId = id
+      if (id !== this.currentId) {
+        this.currentId = id
+      }
+    },
+    coreHover(id) {
+      console.log(0)
+      this.hoverIndex = id
+    },
+    coreLink() {
+      this.hoverIndex = null
     },
     activeStyle(id) {
       if (id === this.currentId) {
         return {
           background: this.resource.core.list[this.currentId].activeColor
+        }
+      } else if (id === this.hoverIndex) {
+        return {
+          background: this.resource.core.list[this.hoverIndex].activeColor
         }
       } else {
         return
@@ -122,12 +139,12 @@ export default {
     },
     checkoutImg(type) {
       if (type === 'pre') {
-        if (this.imgindex > 0) {
-          this.imgindex--
+        if (this.currentId > 0) {
+          this.currentId--
         }
       } else {
-        if (this.imgindex < this.coreShow.imgList.length - 1) {
-          this.imgindex++
+        if (this.currentId < this.coreImgList.length - 1) {
+          this.currentId++
         }
       }
     }
@@ -139,6 +156,7 @@ export default {
   padding-top: 117px;
   text-align: center;
   font-family: SourceHanSansCN, 微软雅黑;
+  padding-bottom: 90px;
   .advantage_title {
     font-weight: normal;
     font-size: 40px;
@@ -151,15 +169,22 @@ export default {
     padding: 0 25px;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    margin-bottom: 0;
     .advantage_item {
       flex: 1;
-      margin: 0 41px;
+      margin: 0 40px;
       padding: 50px 26px;
-      height: 464px;
       background: #fff;
       border-radius: 8px;
       box-shadow: 2px 3px 18px rgba(217, 233, 255, 0.75);
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.01, 1.01) translateY(-10px);
+      }
+      &.advantage_itemgt3 {
+        margin: 0 27px;
+      }
       img {
         margin-bottom: 52px;
         width: 78px;
@@ -222,6 +247,9 @@ export default {
           display: block;
         }
       }
+      > p {
+        margin-bottom: 0;
+      }
     }
   }
   .download {
@@ -233,48 +261,75 @@ export default {
     line-height: 1;
     margin-bottom: 82px;
   }
-  .coreImgBox {
-    padding: 0 8px;
-    position: relative;
-    height: 408px;
-    .imgBtn {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      top: 50%;
-      color: #8b91a1;
-      margin-top: -30px;
-      background: #fff;
-      border-radius: 50%;
-      box-shadow: 0px 0px 16px rgba(217, 233, 255, 0.75);
-      font-size: 35px;
-      line-height: 65px;
-      cursor: pointer;
-      &:hover {
-        box-shadow: 0px 0px 16px rgba(184, 214, 255, 1);
-      }
-      &.pre {
-        left: 0;
-      }
-      &.next {
-        right: 0;
-      }
+  .coreShow {
+    padding: 28px 0 90px 0;
+    .coreShowTitle {
+      font-size: 40px;
+      font-family: SourceHanSansCN-ExtraLight;
+      color: rgba(0, 13, 76, 1);
+      line-height: 1;
+      font-weight: normal;
+      margin-bottom: 22px;
     }
-    .coreImgView {
+    .introduction {
       width: 800px;
-      overflow: hidden;
-      height: 408px;
       margin: 0 auto;
-      ul.imgList {
-        height: 100%;
-        float: left;
-        transition: transform 0.3s ease-in-out;
-        li {
-          display: inline-block;
+      font-size: 20px;
+      font-family: SourceHanSansCN-ExtraLight;
+      color: rgba(125, 132, 150, 1);
+      line-height: 40px;
+      margin-bottom: 50px;
+    }
+    .coreImgBox {
+      padding: 0 8px;
+      position: relative;
+      height: 408px;
+      .imgBtn {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        color: #8b91a1;
+        margin-top: -30px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0px 0px 16px rgba(217, 233, 255, 0.75);
+        font-size: 35px;
+        line-height: 65px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 0px 16px rgba(184, 214, 255, 1);
+        }
+        &.pre {
+          left: 0;
+        }
+        &.next {
+          right: 0;
+        }
+        &.disabled {
+          color: #f0f0f3;
+          &:hover {
+            box-shadow: 0px 0px 16px rgba(217, 233, 255, 0.75);
+          }
+        }
+      }
+      .coreImgView {
+        width: 800px;
+        overflow: hidden;
+        height: 408px;
+        margin: 0 auto;
+        ul.imgList {
           height: 100%;
-          width: 800px;
-          background-position: center center;
-          background-size: contain;
+          float: left;
+          transform: translateZ(0);
+          transition: transform 0.3s ease-in-out;
+          li {
+            display: inline-block;
+            height: 100%;
+            width: 800px;
+            background-position: center center;
+            background-size: contain;
+          }
         }
       }
     }
