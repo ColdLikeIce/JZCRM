@@ -3,15 +3,16 @@ import Router from 'vue-router'
 import Index from '@/views/index'
 import Web from '@/views/web'
 import Download from '@/views/download/download'
-import Servercontent from '@/views/server/serverContent'
+import Servercontent from '@/views/server/servercontent'
 import Introduction from '@/views/about/introduction'
 import CustomCase from '@/views/customCase/customCase'
 import Product from '@/views/product/product'
+import Price from '@/views/server/serverprice'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     return { x: 0, y: 0 }
   },
   routes: [
@@ -38,19 +39,19 @@ export default new Router({
           }
         },
         {
-        path: '/product/jzhrm',
-        name: 'hrm',
-        component: Product,
-        meta: {
-          title: '决招HRM'
+          path: '/product/jzhrm',
+          name: 'hrm',
+          component: Product,
+          meta: {
+            title: '决招HRM'
           }
         },
         {
-        path: '/product/jzjxc',
-        name: 'jxc',
-        component: Product,
-        meta: {
-          title: '决招进销存'
+          path: '/product/jzjxc',
+          name: 'jxc',
+          component: Product,
+          meta: {
+            title: '决招进销存'
           }
         },
         {
@@ -70,6 +71,14 @@ export default new Router({
           }
         },
         {
+          path: '/server/price',
+          name: 'serverprice',
+          component: Price,
+          meta: {
+            title: '产品报价'
+          }
+        },
+        {
           path: 'customerCase',
           name: 'customerCase',
           component: CustomCase,
@@ -84,15 +93,16 @@ export default new Router({
           meta: {
             title: '企业简介'
           }
-        },
-        {
-          path: '/about/news',
-          name: 'news',
-          component: Product,
-          meta: {
-            title: '新闻中心'
-          }
         }
+        // },
+        // {
+        //   path: '/about/news',
+        //   name: 'news',
+        //   component: Product,
+        //   meta: {
+        //     title: '新闻中心'
+        //   }
+        // }
       ]
     }
   ]
