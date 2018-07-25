@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/views/index'
 import Web from '@/views/web'
-import Download from '@/views/dowmload'
+import Download from '@/views/download'
 import Servicecontent from '@/views/servicecontent'
 import Introduction from '@/views/introduction'
 import CustomCase from '@/views/customcase'
@@ -27,8 +27,8 @@ export default new Router({
           }
         },
         {
-          path: 'dowmload',
-          name: 'Dowmload',
+          path: 'download',
+          name: 'Download',
           component: Download,
           meta: {
             title: '下载中心'
@@ -55,7 +55,9 @@ export default new Router({
           name: 'CustomCase',
           component: CustomCase,
           meta: {
-            title: '客户案例',
+            title: '客户案例'
+          }
+        },{
             path: '/product/jzcrm',
             name: 'crm',
             component: Product,
@@ -63,7 +65,6 @@ export default new Router({
               title: '决招CRM'
             }
           },
-        },
         {
           path: '/product/jzhrm',
           name: 'hrm',
