@@ -1,6 +1,9 @@
 <template>
   <div class="index">
-    <div class="part1">
+    <!-- <h3-banner :bgUrl="require('../assets/img/banner.png')">
+
+    </h3-banner> -->
+    <div>
       <p class="introduce">{{ maintitle }}</p>
       <p class="subtitle">{{mainsubtitle}}</p>
       <div class="phonepart">

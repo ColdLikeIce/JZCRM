@@ -6,6 +6,7 @@ import Download from '@/views/dowmload'
 import Servicecontent from '@/views/servicecontent'
 import Introduction from '@/views/introduction'
 import CustomCase from '@/views/customcase'
+import Product from '@/views/product/product'
 Vue.use(Router)
 
 export default new Router({
@@ -13,13 +14,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Web',
-      redirect: '/Introduction',
+      name: 'web',
+      redirect: '/index',
       component: Web,
       children: [
         {
           path: 'index',
-          name: 'Index',
+          name: 'index',
           component: Index,
           meta: {
             title: '首页'
@@ -54,7 +55,29 @@ export default new Router({
           name: 'CustomCase',
           component: CustomCase,
           meta: {
-            title: '客户案例'
+            title: '客户案例',
+            path: '/product/jzcrm',
+            name: 'crm',
+            component: Product,
+            meta: {
+              title: '决招CRM'
+            }
+          },
+        },
+        {
+          path: '/product/jzhrm',
+          name: 'hrm',
+          component: Product,
+          meta: {
+            title: '决招HRM'
+          }
+        },
+        {
+          path: '/product/jzjxc',
+          name: 'jxc',
+          component: Product,
+          meta: {
+            title: '决招进销存'
           }
         }
       ]
