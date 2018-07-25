@@ -2,7 +2,7 @@
 <template>
   <div class="h_904">
     <p class="title">商场如战场，定胜有决招</p>
-    <img class="t_11" src="../assets/img/AboutUs/juezhao.png">
+    <img class="t_11" src="static/img/AboutUs/juezhao.png">
     <div class="t_49">
       <p class="content">
         深圳决招网络科技有限公司是一家移动互联网时代的创新型SaaS服务运营商，同时也是深圳奥哲网络科技有限公司旗下的全资子公司，2018年获得阿里5000万元战略投资，是钉钉应用市场第一家获得阿里投资的运营商。决招网络致力于解决广大中小企业在管理运营上的核心痛点，提供一站式信息化解决方案，提升企业运营效率和核心 竞争力，助力企业赢在商场，决胜未来。
@@ -21,9 +21,9 @@
       </p>
     </div>
     <div class="logo">
-      <img class="leftlogo" src="../assets/img/AboutUs/aozhelogo.png">
-      <img class="rightlogo" src="../assets/img/AboutUs/cyunlogo.png">
-      <img class="rightlogo" src="../assets/img/AboutUs/jzlogo.png">
+      <img class="leftlogo" src="static/img/AboutUs/aozhelogo.png">
+      <img class="rightlogo" src="static/img/AboutUs/cyunlogo.png">
+      <img class="rightlogo" src="static/img/AboutUs/jzlogo.png">
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
 <template>
   <div class="h_1043">
     <div class="pic">
-      <img src="../static/img/DowmLoad/banner.png">
+      <img src="static/img/DowmLoad/banner.png">
     </div>
     <div class="dowmload">
       <div :class="item.class" v-for="(item,index) in list" :key="index">
