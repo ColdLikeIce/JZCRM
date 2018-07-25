@@ -2,7 +2,7 @@
 <template>
   <div class="h_1043">
     <div class="pic">
-      <img src="../assets/img/banner.png">
+      <img src="../static/img/DowmLoad/banner.png">
     </div>
     <div class="dowmload">
       <div :class="item.class" v-for="(item,index) in list" :key="index">
@@ -26,22 +26,22 @@ export default {
     return {
       list: [
         {
-          imgurl: require('../assets/img/DowmLoad/CRMdowmload.png'),
-          backimgurl: require('../assets/img/DowmLoad/CRM.png'),
+          imgurl: '../static/img/DowmLoad/CRMdowmload.png',
+          backimgurl: '../static/img/DowmLoad/CRM.png',
           title: '决招CRM',
           content: '全面优化企业销售流程',
           class: 'leftproduct'
         },
         {
-          imgurl: require('../assets/img/DowmLoad/HRMdowmload.png'),
-          backimgurl: require('../assets/img/DowmLoad/HRM.png'),
+          imgurl: '../static/img/DowmLoad/HRMdowmload.png',
+          backimgurl: '../static/img/DowmLoad/HRM.png',
           title: '决招HRM',
           content: '全面优化企业HR管理流程',
           class: 'centerproduct'
         },
         {
-          imgurl: require('../assets/img/DowmLoad/TERPdowmload.png'),
-          backimgurl: require('../assets/img/DowmLoad/Terp.png'),
+          imgurl: '../static/img/DowmLoad/TERPdowmload.png',
+          backimgurl:'../static/img/DowmLoad/Terp.png',
           title: '决招进销存',
           content: '全面优化企业进销存流程',
           class: 'rightproduct'
