@@ -2,7 +2,7 @@
 <template>
   <div>
     <h3-banner :bgUrl="bannerimg"></h3-banner>
-    <div class="h_1750">
+    <div class="h_1750 wraper">
       <p class="title">
         {{title}}
       </p>
@@ -55,7 +55,7 @@ import h3Banner from '../../components/common/h3-banner'
 export default {
   data() {
     return {
-      bannerimg:'/static/img/ServiceManage/servicecontent/banner.png',
+      bannerimg: '/static/img/ServiceManage/servicecontent/banner.png',
       title: '五大服务保障，只为您更安心的使用决招产品',
       list: [
         {
