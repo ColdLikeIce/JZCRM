@@ -1,4 +1,3 @@
-<!--  -->
 <template>
   <div class="header wraper">
     <div>
@@ -80,22 +79,29 @@ export default {
         },
         {
           name: '关于我们',
-          path: '/about',
-          children: [
-            {
-              name: '企业简介',
-              path: '/about/introduction'
-            },
-            {
-              name: '新闻中心',
-              path: '/about/news'
-            }
-          ]
+          path: '/about/introduction',
+          // children: [
+          //   {
+          //     name: '企业简介',
+          //     path: '/about/introduction'
+          //   },
+          //   {
+          //     name: '新闻中心',
+          //     path: '/about/news'
+          //   }
+          // ]
         }
       ]
     }
   },
-
+  watch: {
+    $route: {
+      handler: function(val, oldval) {
+        this.current = [val.path]
+      },
+      immediate: true
+    }
+  },
   methods: {
     openLink(route){
       this.$router.push({path:route})

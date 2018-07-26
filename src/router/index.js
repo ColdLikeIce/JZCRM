@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/views/index'
+import Index from '@/views/index/index'
 import Web from '@/views/web'
 import Download from '@/views/download/download'
 import Servercontent from '@/views/server/servercontent'

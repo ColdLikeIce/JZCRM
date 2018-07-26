@@ -23,10 +23,9 @@ export default {
 </script>
 <style lang='less' scoped>
 .banner{
-  width: 100%;
+  min-width:1310px;
   height: 480px;
   background-position: center center;
   background-size: cover;
-  
 }
 </style>

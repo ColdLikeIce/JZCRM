@@ -100,9 +100,9 @@ export default {
   watch: {
     $route: {
       handler: function(val, oldval) {
-        ;(this.currentId = 0),
-          (this.hoverIndex = null),
-          (this.resource = staticData[val.name])
+        this.currentId = 0
+        this.hoverIndex = null
+        this.resource = staticData[val.name]
       },
       immediate: true
     }
@@ -213,6 +213,7 @@ export default {
 .core {
   background: linear-gradient(#f8fafd 0%, #fff 20%);
   padding-top: 90px;
+  min-width:1310px;
   .title {
     font-weight: normal;
     margin-bottom: 60px;
@@ -227,8 +228,8 @@ export default {
     align-items: center;
     margin-bottom: 52px;
     li {
-      width: 87px;
-      margin: 0 37px;
+      width: 115px;
+      margin: 0 30px;
       font-size: 16px;
       font-family: SourceHanSansCN-Light;
       color: rgba(0, 13, 76, 1);
@@ -272,7 +273,8 @@ export default {
       margin-bottom: 22px;
     }
     .introduction {
-      width: 800px;
+      min-height: 80px;
+      width: 1000px;
       margin: 0 auto;
       font-size: 20px;
       font-family: SourceHanSansCN-ExtraLight;
@@ -337,6 +339,7 @@ export default {
 }
 .common {
   background: linear-gradient(#f8fafd 0%, #fff 30%);
+  min-width: 1310px;
   .common_wrap {
     padding: 100px 8px 200px 8px;
     display: flex;

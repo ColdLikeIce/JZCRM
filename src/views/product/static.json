@@ -246,7 +246,7 @@
     }
   },
   "jxc": {
-    "banner": "/static/img/product_jxc/banner.png",
+    "banner": "/static/img/product_jxc/banner@3x.png",
     "advantage": {
       "title": "决招进销存四大优势",
       "list": [

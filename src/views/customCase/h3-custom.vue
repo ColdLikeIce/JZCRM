@@ -3,8 +3,10 @@
   <div class="customCaseItem">
       <p class="companyName">{{caseData.companyName}}</p>
       <div class="flexpart v_center" :style="`margin:${caseData.marginTop}px 0 60px 0`">
-        <img class="logo" :src="caseData.img" alt="logo">
-        <div>
+        <div class="logo">
+          <img  :src="caseData.img" alt="logo">
+        </div>
+        <div class="introduction">
           <p class="title">行业</p>
           <p style="margin-bottom:10px">{{caseData.industry}}</p>
           <p class="title" style="margin-bottom:7px;">企业介绍</p>
@@ -73,6 +75,9 @@ export default {
       }
       .flexpart{
         display: flex;
+        .introduction{
+          flex:1;
+        }
         &.v_center{
           align-items: center;
         }
@@ -108,9 +113,12 @@ export default {
           } 
         }
       }
-      .logo{
-        margin-right: 85px;
-      }
-     
  }
+ .logo{
+   display: block;
+  width:401px;
+  text-align: center;
+  margin-left: -15px;
+        // margin-right: 85px;
+      }
 </style>
