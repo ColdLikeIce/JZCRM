@@ -348,7 +348,7 @@
         {
           "id": 5,
           "icon": "/static/img/product_jxc/06.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#5CABFF",
           "title": "仓库调拨",
           "introduction": "对于存在多个仓库或分支机构的企业，通过仓库调拨操作，完成产品在不同仓库之间的转运。",
           "imgList": "/static/img/product_jxc/ckdb.png"
@@ -356,7 +356,7 @@
         {
           "id": 6,
           "icon": "/static/img/product_jxc/07.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#FFB75E",
           "title": "库存预警",
           "introduction": "将产品实际库存量跟最小库存及最大库存限制作对比，当低于或者超出库存限制时，系统自动做出预警提示。",
           "imgList": "/static/img/product_jxc/kcyj.png"
@@ -364,7 +364,7 @@
         {
           "id": 7,
           "icon": "/static/img/product_jxc/08.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#FF775A",
           "title": "采购入库统计",
           "introduction": "按照供应商或者采购员对采购入库的数据，进行月度、季度、年度的数据统计分析。",
           "imgList": "/static/img/product_jxc/cgrk.png"
@@ -372,7 +372,7 @@
         {
           "id": 8,
           "icon": "/static/img/product_jxc/09.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#93D45F",
           "title": "资金调拨",
           "introduction": "通过资金调拨操作，可完成资金在不同账户之间的调拨，对资金进行灵活的管理。",
           "imgList": "/static/img/product_jxc/zjtb.png"
@@ -388,7 +388,7 @@
         {
           "id": 10,
           "icon": "/static/img/product_jxc/11.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#5CABFF",
           "title": "应收款分析",
           "introduction": "对客户应收账款金额统计分析，分别从期初预收余额、期初应收余额、销售应收款等维度进行统计分析。",
           "imgList": "/static/img/product_jxc/ysk.png"
@@ -396,7 +396,7 @@
         {
           "id": 11,
           "icon": "/static/img/product_jxc/12.png",
-          "activeColor": "#63D9D3",
+          "activeColor": "#FFB75E",
           "title": "商品毛利分析",
           "introduction": "根据产品对应的销售价格减去采购价格进行差价分析。",
           "imgList": "/static/img/product_jxc/spml.png"
