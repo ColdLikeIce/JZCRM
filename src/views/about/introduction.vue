@@ -2,9 +2,11 @@
 <template>
   <div>
     <h3-banner :bgUrl="bannerimg"></h3-banner>
-    <div class="h_904">
+    <div class="intro wraper">
       <p class="title">商场如战场，定胜有决招</p>
-      <img class="t_11" src="/static/img/AboutUs/juezhao.png">
+      <div class="t_11">
+        <img src="/static/img/AboutUs/juezhao.png">
+      </div>
       <div class="t_49">
         <p class="content">
           深圳决招网络科技有限公司是一家移动互联网时代的创新型SaaS服务运营商，同时也是深圳奥哲网络科技有限公司旗下的全资子公司，2018年获得阿里5000万元战略投资，是钉钉应用市场第一家获得阿里投资的运营商。决招网络致力于解决广大中小企业在管理运营上的核心痛点，提供一站式信息化解决方案，提升企业运营效率和核心 竞争力，助力企业赢在商场，决胜未来。
@@ -22,10 +24,10 @@
           高效信息化管理引擎，为强盛中小企业而生。决招网络始终秉承 “为中小企业成功护航” 的经营理念，像企业更多的细分应用领域拓展，打造更多的精品Saas应用，让信息化管理真正惠及每一家中小企业。
         </p>
       </div>
-      <div class="logo">
-        <img class="leftlogo" src="/static/img/AboutUs/aozhelogo.png">
-        <img class="rightlogo" src="/static/img/AboutUs/cyunlogo.png">
-        <img class="rightlogo" src="/static/img/AboutUs/jzlogo.png">
+      <div class="logopart">
+        <img class="logo" src="/static/img/AboutUs/aozhelogo.png">
+        <img class="logo" src="/static/img/AboutUs/cyunlogo.png">
+        <img class="logo" src="/static/img/AboutUs/jzlogo.png">
       </div>
     </div>
   </div>
@@ -45,43 +47,42 @@ export default {
 }
 </script>
 <style lang='less' scoped>
-.title {
-  font-size: 34px;
-  color: rgba(2, 16, 72, 1);
-  line-height: 1;
-  margin-bottom: 0;
-}
-.h_904 {
+.intro {
   margin-top: 117px;
-  height: 904px;
-}
-.t_11 {
-  margin-top: 11px;
-  margin-bottom: 49px;
-}
-.t_49 {
-  margin-top: 49px;
-  width: 1075px;
-  height: 315px;
-  margin: 0 auto;
-  text-align: left;
-  .content {
-    text-indent: 2em;
-    font-size: 14px;
-    font-family: SourceHanSansCN-Light;
-    color: rgba(120, 134, 162, 1);
-    line-height: 30px;
-    margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    font-size: 34px;
+    color: rgba(2, 16, 72, 1);
+    line-height: 1;
+    margin-bottom: 0;
   }
-}
-.logo {
-  margin-top: 132px;
-  float: left;
-  .leftlogo {
-    margin-left: 256px;
+  .t_11 {
+    margin-top: 11px;
+    margin-bottom: 49px;
   }
-  .rightlogo {
-    margin-left: 140px;
+  .t_49 {
+    margin-top: 49px;
+    width: 1075px;
+    margin: 0 auto;
+    text-align: left;
+    .content {
+      text-indent: 2em;
+      font-size: 14px;
+      font-family: SourceHanSansCN-Light;
+      color: rgba(120, 134, 162, 1);
+      line-height: 30px;
+      margin-bottom: 0px;
+    }
+  }
+  .logopart {
+    width: 990px;
+    margin: auto auto;
+    margin-top: 132px;
+    margin-bottom: 155px;
+    .logo {
+      margin: auto 70px;
+    }
   }
 }
 </style>

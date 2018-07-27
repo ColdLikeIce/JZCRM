@@ -2,13 +2,13 @@
 <template>
   <div>
     <h3-banner :bgUrl="bannerimg"></h3-banner>
-    <div class="h_1750 wraper">
+    <div class="service wraper">
       <p class="title">
         {{title}}
       </p>
       <div class="totalpart">
-        <div v-for="(item,index) in list" :key="index">
-          <div v-if="index%2==0" class="partitem">
+        <div class="partitem" v-for="(item,index) in list" :key="index">
+          <div v-if="index%2==0" class="spart">
             <div class="sleftpart">
               <img :src="item.imgurl">
             </div>
@@ -17,30 +17,30 @@
                 <img :src="item.numberurl">
               </div>
               <div class="sbottom">
-                <div class="theme">
+                <p>
                   {{item.title}}
-                </div>
-                <div class="detail">
+                </p>
+                <p>
                   {{item.content}}
-                </div>
+                </p>
               </div>
             </div>
           </div>
-          <div v-else class="partitem">
-            <div class="dleftpart">
-              <div class="dimgurl">
+          <div v-else class="spart">
+            <div class="srightpart dleftpart">
+              <div class="simgurl">
                 <img :src="item.numberurl">
               </div>
-              <div class="dbottom">
-                <div class="theme">
+              <div class="sbottom">
+                <p>
                   {{item.title}}
-                </div>
-                <div class="detail">
+                </p>
+                <p>
                   {{item.content}}
-                </div>
+                </p>
               </div>
             </div>
-            <div class="drightpart">
+            <div class="sleftpart drightpart">
               <img :src="item.imgurl">
             </div>
           </div>
@@ -102,65 +102,67 @@ export default {
 }
 </script>
 <style lang='less' scoped>
-.h_1750 {
+.service {
   margin-top: 100px;
-  height: 1750px;
 }
 .title {
   font-size: 40px;
   color: rgba(0, 13, 76, 1);
 }
-.partitem {
-  margin-top: 85px;
-  height: 185px;
-}
+
 .totalpart {
   margin-top: 114px;
-}
-.sleftpart {
-  float: left;
-  margin-left: 182px;
-  height: 200px;
-}
-.dleftpart {
-  float: left;
-  margin-left: 74px;
-  height: 200px;
-}
-.sbottom {
-  clear: both;
-  text-align: left;
-  margin-left: 322px;
-}
-.dbottom {
-  clear: both;
-  text-align: left;
-  margin-left: 101px;
-}
-.srightpart {
-  float: left;
-}
-.drightpart {
-  float: left;
-  margin-left: 232px;
+  display: flex;
+  flex-direction: column;
+  .partitem {
+    margin: 0 103px;
+    margin-top: 85px;
+    &:last-of-type {
+      margin-bottom: 167px;
+    }
+    .spart {
+      display: flex;
+      align-items: center;
+      .sleftpart {
+        margin-left: 80px;
+        &.drightpart {
+          margin-left: 232px;
+        }
+      }
+      .srightpart {
+        width: 466px;
+        margin-left: 295px;
+        display: flex;
+        flex-direction: column;
+        &.dleftpart {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
 }
 .simgurl {
-  float: left;
-  margin-left: 295px;
+  text-align: left;
 }
-.dimgurl {
-  float: left;
-  margin-left: 74px;
-}
-.theme {
-  font-size: 26px;
-  line-height: 1;
-  margin-bottom: 32px;
-}
-.detail {
-  width: 436px;
-  font-size: 14px;
-  height: 37px;
-  line-height: 22px;
+.sbottom {
+  text-align: left;
+  margin-left: 26px;
+  p {
+    &:first-of-type {
+      width: 157px;
+      font-size: 26px;
+      font-family: SourceHanSansCN-Light;
+      color: rgba(0, 13, 76, 1);
+      line-height: 1;
+      margin-bottom: 32px;
+    }
+    &:last-of-type {
+      width: 436px;
+      font-size: 14px;
+      font-family: SourceHanSansCN-Light;
+      color: rgba(125, 132, 150, 1);
+      line-height: 22px;
+    }
+  }
 }
 </style>
