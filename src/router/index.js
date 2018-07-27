@@ -1,13 +1,14 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Index from '@/views/index/index'
-import Web from '@/views/web'
-import Download from '@/views/download/download'
-import Servercontent from '@/views/server/servercontent'
-import Introduction from '@/views/about/introduction'
-import CustomCase from '@/views/customCase/customCase'
-import Product from '@/views/product/product'
-import Price from '@/views/server/serverprice'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Index from '@/views/index/index';
+import Web from '@/views/web';
+import Download from '@/views/download/download';
+import Servercontent from '@/views/server/servercontent';
+import Introduction from '@/views/about/introduction';
+import CustomCase from '@/views/customCase/customCase';
+import Product from '@/views/product/product';
+import Price from '@/views/server/serverprice';
+import Login from '@/views/login/login';
 Vue.use(Router)
 
 export default new Router({
@@ -92,6 +93,14 @@ export default new Router({
           component: Introduction,
           meta: {
             title: '企业简介'
+          }
+        },
+        {
+          path: '/login',
+          name: 'login',
+          component: Login,
+          meta: {
+            title: '登录'
           }
         }
         // },

@@ -65,29 +65,29 @@
             <tr>
               <td>
                 <img src="/static/img/ServiceManage/serviceprice/jxc/name.png" alt="">
-                <input type="text" placeholder="姓名">
+                <input type="text" v-model="name" placeholder="姓名">
               </td>
               <td>
                 <img src="/static/img/ServiceManage/serviceprice/jxc/com.png" alt="">
-                <input type="text" placeholder="公司"></td>
+                <input type="text" v-model="company" placeholder="公司"></td>
             </tr>
             <tr>
               <td>
                 <img src="/static/img/ServiceManage/serviceprice/jxc/email.png" alt="">
-                <input type="email" placeholder="工作邮箱"></td>
+                <input type="email" v-model="email" placeholder="工作邮箱"></td>
               </td>
               <td>
                 <img src="/static/img/ServiceManage/serviceprice/jxc/phone.png" alt="">
-                <input type="number" placeholder="手机号码"></td>
+                <input type="number" v-model="phone" placeholder="手机号码"></td>
               </td>
             </tr>
             <tr>
               <td class="remarktd">
-                <input class="remark" type="text">
+                <textarea class="remark" v-model="remark" placeholder="请输入留言..." type="text" />
               </td>
             </tr>
             <tr>
-              <a-button @click="submitTab" type="primary">
+              <a-button @click.native="submitTab" type="primary">
                 发送
               </a-button>
             </tr>
@@ -100,8 +100,10 @@
 </template>
 
 <script>
-import staticData from './static'
-import h3Banner from '../../components/common/h3-banner'
+import axios from 'axios';
+import staticData from './static';
+import h3Banner from '../../components/common/h3-banner';
+
 export default {
   name: 'ServerPrice',
   data() {
@@ -155,10 +157,21 @@ export default {
       }
       return newObj
     },
-    submitTab(tabData) {
-      debugger
+    submitTab() {
+      let param = {
+        name:this.name,
+        phone:this.phone,
+        email:this.email,
+        company:this.company,
+        remark:this.remark
+      }
+       axios.post('',parama).then(data=>{
+
+       }).catch(error=>{
+
+       })
     }
-  },
+},
   created() {
     this.data = this.deepClone(staticData)
     this.resource = this.data.crm
@@ -403,6 +416,9 @@ export default {
           }
           .remark {
             border: 1px solid #dadada;
+            padding: 10px;
+            font-size:14px;
+            outline: none;
             width: 885px;
             height: 150px;
           }

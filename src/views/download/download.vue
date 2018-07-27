@@ -61,7 +61,6 @@ export default {
   display: flex;
   align-items: center;
   .itempart {
-    box-shadow: 2px 3px 18px rgba(217, 233, 255, 0.75);
     margin: 0 90px;
     flex: 1;
   }
