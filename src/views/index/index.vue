@@ -23,9 +23,9 @@
           <p class="left_item">{{easyusedmsg}}</p>
           <p class="left_item">{{freemsg}}</p>
           <div class="left_button">
-            <a-button class="button_item">决招CRM体验</a-button>
-            <a-button class="button_item">决招HRM体验</a-button>
-            <a-button class="button_item">决招进销存体验</a-button>
+            <a-button class="button_item" @click.native="experience('crm')">决招CRM体验</a-button>
+            <a-button class="button_item" @click.native="experience('hrm')">决招HRM体验</a-button>
+            <a-button class="button_item" @click.native="experience('jxc')">决招进销存体验</a-button>
           </div>
         </div>
         <div class="rightpart">
@@ -151,6 +151,20 @@ export default {
       if(scrollTop+this.clientHeight > this.experienceTop+50){
         this.experienceAnimate = true
       }
+    },
+    experience(type){
+      switch (type) {
+        case "crm":
+          window.open('https://wx.dingtalk.com/invite-page/weixin.html?code=015b619d49&inviterUid=CB8362849F470A20F35C1C57D30B4908','_blank')
+          break;
+        case "hrm":
+          window.open('https://wx.dingtalk.com/invite-page/weixin.html?code=bb7722bc5d&inviterUid=6688948BE73EBB53','_blank')
+          break;
+        case "jxc":
+          window.open('https://wx.dingtalk.com/invite-page/weixin.html?code=f9611176fe&inviterUid=20729531C739F347FF4BBDCA828801C7','_blank')
+          break;  
+      }
+        
     }
   },
   computed:{
