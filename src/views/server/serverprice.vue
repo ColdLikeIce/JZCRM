@@ -177,8 +177,10 @@ export default {
       }
       if(this.name.trim()===''){
         this.$message.error('请输入姓名');
+        return false
       }else if(this.phone.trim().length!==11){
         this.$message.error('请输入正确的手机号码');
+        return false
       }
        this.loading = true;
        
