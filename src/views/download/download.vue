@@ -2,7 +2,7 @@
 <template>
   <div class="wraper">
     <div class="pic">
-      <img src="static/img/DowmLoad/banner.png">
+      <img src="/static/img/DowmLoad/banner.png">
     </div>
     <div class="dowmloadpart">
       <div class="itempart" v-for="(item,index) in list" :key="index">

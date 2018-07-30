@@ -87,7 +87,7 @@
               </td>
             </tr>
             <tr>
-              <a-button @click.native="submitTab" type="primary">
+              <a-button  :loading="loading" @click.native="submitTab" type="primary">
                 发送
               </a-button>
             </tr>
@@ -129,7 +129,13 @@ export default {
       ],
       data: {},
       resource: {},
-      defaultIndex: 0
+      defaultIndex: 0,
+      name:'',
+      phone:'',
+      email:'',
+      company:'',
+      remark:'',
+      loading:false
     }
   },
 
@@ -158,6 +164,10 @@ export default {
       return newObj
     },
     submitTab() {
+      if(this.loading){
+        this.$message.warning('请勿重复提交');
+        return false
+      }
       let param = {
         name:this.name,
         phone:this.phone,
@@ -165,10 +175,22 @@ export default {
         company:this.company,
         remark:this.remark
       }
-       axios.post('',parama).then(data=>{
-
-       }).catch(error=>{
-
+      if(this.name.trim()===''){
+        this.$message.error('请输入姓名');
+      }else if(this.phone.trim().length!==11){
+        this.$message.error('请输入正确的手机号码');
+      }
+       this.loading = true;
+       
+       axios.post('../Home/WriteLog',param).then(data=>{
+        if(data.data.Result) {
+          this.loading = false;
+          this.$message.success('提交成功');
+        }else {
+          this.loading = false;
+        }
+       }).catch(error=>{ 
+          this.loading = false;
        })
     }
 },

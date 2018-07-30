@@ -121,9 +121,6 @@ export default {
       caseImgList:[
         '/static/img/index/company01.png',
         '/static/img/index/company02.png',
-        '/static/img/index/company03.png',
-         '/static/img/index/company01.png',
-        '/static/img/index/company02.png',
         '/static/img/index/company03.png'
         ],
       easyusedmsg: '决招产品操作便捷、容易上手',

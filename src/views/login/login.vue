@@ -36,7 +36,7 @@ export default {
   mounted(){
     this.qrLogin('qrcrm');
     this.qrLogin('qrhrm');
-    // this.qrLogin('qrjxc');
+    this.qrLogin('qrjxc');
     console.log(window.frames)
   },
 
@@ -48,6 +48,9 @@ export default {
            decodeUrl = "https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=" + appId + "&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=https://www.h3yun.com/Login/ScanLoginCallback";
            encodeUrl = encodeURIComponent("https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=" + appId + "&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=https://www.h3yun.com/login/ScanLoginCallback");
           }else{
+           appId = "dingoajfc46mx8eosv9qp1";
+           decodeUrl = "https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=" + appId + "&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=https%3A%2F%2Fsaas.h3yun.com%2Flogin%2FScanLoginCallback%3Fsuite%3Dsuitevuwnqkfwemqtv3ch%26logoutRedirectUrl%3Dhttp%3A%2F%2Fjuezhaosaas.h3yun.com%26redirecturl%3Dhttps%3A%2F%2Fwww.saas.h3yun.com%2FCRM%2Findex.html";
+           encodeUrl = encodeURIComponent("https://oapi.dingtalk.com/connect/oauth2/sns_authorize?appid=" + appId + "&response_type=code&scope=snsapi_login&state=STATE&redirect_uri=https%3A%2F%2Fsaas.h3yun.com%2Flogin%2FScanLoginCallback%3Fsuite%3Dsuitevuwnqkfwemqtv3ch%26logoutRedirectUrl%3Dhttp%3A%2F%2Fjuezhaosaas.h3yun.com%26redirecturl%3Dhttps%3A%2F%2Fwww.saas.h3yun.com%2FCRM%2Findex.html");
           } 
     let hanndleMessage = function (event) {
         let origin = event.origin;
@@ -55,7 +58,9 @@ export default {
         if (origin.indexOf("dingtalk") > -1) {
             console.log(event.data);
             let loginTmpCode = event.data; //拿到loginTmpCode后就可以在这里构造跳转链接进行跳转了
-            window.location.href = decodeUrl + "&loginTmpCode=" + loginTmpCode; //跳转到授权链接
+            if(type!=='qrcrm'){
+              window.location.href = decodeUrl + "&loginTmpCode=" + loginTmpCode; //跳转到授权链接
+            }  
         }
     };
 

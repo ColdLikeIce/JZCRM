@@ -61,6 +61,7 @@ export default {
       font-family:SourceHanSansCN-Light;
       color:rgba(125,132,150,1);
       line-height:26px;
+      margin-bottom: 0;
     }
     .more{
       margin-top: 14px;
