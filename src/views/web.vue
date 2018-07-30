@@ -4,11 +4,10 @@
        <router-view/>
        <h3-footer></h3-footer>
        <h3-backtop></h3-backtop>
-       <h3-consult></h3-consult>
+       <!-- <h3-consult></h3-consult> -->
        <h3-login v-if="isLogin"></h3-login>
     </div>
 </template>
-
 <script>
 /* eslint-disable*/
 import h3Header from '@/components/common/h3-header.vue'
