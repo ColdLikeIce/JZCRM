@@ -19,6 +19,7 @@ export default {
 <style lang='less' scoped>
 .consult{
   position: fixed;
+  z-index: 998;
   right: 30px;
   bottom: 100px;
   font-size: 13px;

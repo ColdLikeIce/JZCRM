@@ -5,6 +5,7 @@ import App from './App';
 import router from './router';
 import 'vue-antd-ui/dist/antd.css';
 import Antd from 'vue-antd-ui'; 
+
 Vue.config.productionTip = false
 Vue.use(Antd)
 /* eslint-disable no-new */

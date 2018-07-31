@@ -33,7 +33,7 @@ export default {
 </script>
 <style lang='less' scoped>
 .footer{
-width:100%;
+min-width:1310px;
 height:402px;
 background:rgba(245,249,252,1);
 }

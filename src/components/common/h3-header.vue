@@ -1,4 +1,3 @@
-<!--  -->
 <template>
   <div class="header wraper">
     <div>
@@ -17,8 +16,8 @@
       </a-menu>
     </div>
     <div class="btnGround">
-      <a-button class="login" type="primary" ghost>登录</a-button>
-      <a-button type="primary">注册</a-button>
+      <a-button class="login" type="primary" @click.native="login" ghost>登录</a-button>
+      <a-button type="primary" @click.native="regist">注册</a-button>
     </div>
   </div>
 </template>
@@ -76,29 +75,47 @@ export default {
         },
         {
           name: '帮助中心',
-          path: '/help'
+          path: '/hlep'
         },
         {
           name: '关于我们',
-          path: '/about',
-          children: [
-            {
-              name: '企业简介',
-              path: '/about/introduction'
-            },
-            {
-              name: '新闻中心',
-              path: '/about/news'
-            }
-          ]
+          path: '/about/introduction',
+          // children: [
+          //   {
+          //     name: '企业简介',
+          //     path: '/about/introduction'
+          //   },
+          //   {
+          //     name: '新闻中心',
+          //     path: '/about/news'
+          //   }
+          // ]
         }
       ]
     }
   },
-
+  watch: {
+    $route: {
+      handler: function(val, oldval) {
+        this.current = [val.path]
+      },
+      immediate: true
+    }
+  },
   methods: {
     openLink(route){
-      this.$router.push({path:route})
+      if(route==='/hlep'){
+       window.open('http://juezhao.h3yun.com/manage/index.php','_blank')
+      }else{
+        this.$router.push({path:route})
+      }
+      
+    },
+    regist(){
+      window.open('https://oa.dingtalk.com/register.html?spm=a3140.8736650.2231602.11.75185c8cf87kFc&source=2202&lwfrom=2017120202092064209309201','_blank')
+    },
+    login(){
+      this.$router.push({path:'/login'})
     }
   },
 }
