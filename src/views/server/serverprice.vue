@@ -24,7 +24,7 @@
               <a-select-option v-for="(peoitem,idx) in item.pricelist" :value="peoitem.key" :index="index" :key="idx">{{peoitem.value}}</a-select-option>
             </a-select>
           </div>
-          <a-button :class="{'behind':index>1}">
+          <a-button :class="{'behind':index>1}" @click="opendetail">
             了解详情
           </a-button>
         </li>
@@ -155,7 +155,14 @@ export default {
       }
       return newObj
     },
-    submitTab(tabData) {
+    opendetail() {
+      if (this.defaultIndex === 0) {
+        this.$router.push({ path: '/product/jzcrm' })
+      } else if (this.defaultIndex === 1) {
+        this.$router.push({ path: '/product/jzhrm' })
+      } else {
+        this.$router.push({ path: '/product/jzjxc' })
+      }
       debugger
     }
   },
@@ -388,8 +395,8 @@ export default {
           border: 1px solid #dadada;
           flex: 1;
           width: 421px;
-          &.remarktd{
-            border:none
+          &.remarktd {
+            border: none;
           }
           &:first-of-type {
             margin-right: 43px;
