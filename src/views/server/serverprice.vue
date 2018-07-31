@@ -87,7 +87,7 @@
               </td>
             </tr>
             <tr>
-              <a-button  :loading="loading" @click.native="submitTab" type="primary">
+              <a-button :loading="loading" @click.native="submitTab" type="primary">
                 发送
               </a-button>
             </tr>
@@ -100,9 +100,9 @@
 </template>
 
 <script>
-import axios from 'axios';
-import staticData from './static';
-import h3Banner from '../../components/common/h3-banner';
+import axios from 'axios'
+import staticData from './static'
+import h3Banner from '../../components/common/h3-banner'
 
 export default {
   name: 'ServerPrice',
@@ -130,12 +130,12 @@ export default {
       data: {},
       resource: {},
       defaultIndex: 0,
-      name:'',
-      phone:'',
-      email:'',
-      company:'',
-      remark:'',
-      loading:false
+      name: '',
+      phone: '',
+      email: '',
+      company: '',
+      remark: '',
+      loading: false
     }
   },
 
@@ -156,6 +156,15 @@ export default {
       this.resource.typelist[index].price = val
       this.resource.typelist[index].selectIndex = vm.key
     },
+    opendetail() {
+      if (this.defaultIndex === 0) {
+        this.$router.push({ path: '/product/jzcrm' })
+      } else if (this.defaultIndex === 1) {
+        this.$router.push({ path: '/product/jzhrm' })
+      } else if (this.defaultIndex === 2) {
+        this.$router.push({ path: '/product/jzjxc' })
+      }
+    },
     deepClone(obj) {
       let newObj = obj instanceof Array ? [] : {}
       for (let i in obj) {
@@ -163,51 +172,42 @@ export default {
       }
       return newObj
     },
-<<<<<<< HEAD
-    opendetail() {
-      if (this.defaultIndex === 0) {
-        this.$router.push({ path: '/product/jzcrm' })
-      } else if (this.defaultIndex === 1) {
-        this.$router.push({ path: '/product/jzhrm' })
-      } else {
-        this.$router.push({ path: '/product/jzjxc' })
-      }
-      debugger
-=======
     submitTab() {
-      if(this.loading){
-        this.$message.warning('请勿重复提交');
+      if (this.loading) {
+        this.$message.warning('请勿重复提交')
         return false
       }
       let param = {
-        name:this.name,
-        phone:this.phone,
-        email:this.email,
-        company:this.company,
-        remark:this.remark
+        name: this.name,
+        phone: this.phone,
+        email: this.email,
+        company: this.company,
+        remark: this.remark
       }
-      if(this.name.trim()===''){
-        this.$message.error('请输入姓名');
+      if (this.name.trim() === '') {
+        this.$message.error('请输入姓名')
         return false
-      }else if(this.phone.trim().length!==11){
-        this.$message.error('请输入正确的手机号码');
+      } else if (this.phone.trim().length !== 11) {
+        this.$message.error('请输入正确的手机号码')
         return false
       }
-       this.loading = true;
-       
-       axios.post('../Home/WriteLog',param).then(data=>{
-        if(data.data.Result) {
-          this.loading = false;
-          this.$message.success('提交成功');
-        }else {
-          this.loading = false;
-        }
-       }).catch(error=>{ 
-          this.loading = false;
-       })
->>>>>>> 760f8e8f7af3ea44c039fb0d2ec7574bd7a5b8ad
+      this.loading = true
+
+      axios
+        .post('../Home/WriteLog', param)
+        .then(data => {
+          if (data.data.Result) {
+            this.loading = false
+            this.$message.success('提交成功')
+          } else {
+            this.loading = false
+          }
+        })
+        .catch(error => {
+          this.loading = false
+        })
     }
-},
+  },
   created() {
     this.data = this.deepClone(staticData)
     this.resource = this.data.crm
@@ -453,7 +453,7 @@ export default {
           .remark {
             border: 1px solid #dadada;
             padding: 10px;
-            font-size:14px;
+            font-size: 14px;
             outline: none;
             width: 885px;
             height: 150px;
